@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Poppins;
+}
+
+.figtree-thin {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.figtree-thin {
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.figtree-extralight {
+  font-family: "Figtree", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.figtree-light {
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.figtree-medium {
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.figtree-semibold {
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.figtree-bold {
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.figtree-extrabold {
+  font-family: "Figtree", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.figtree-black {
+  font-family: "Figtree", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.figtree-thin-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.figtree-extralight-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.figtree-light-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.figtree-regular-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.figtree-medium-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.figtree-semibold-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.figtree-bold-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.figtree-extrabold-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.figtree-black-italic {
+  font-family: "Figtree", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.pop-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.pop-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.pop-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.pop-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pop-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.pop-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.pop-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pop-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.pop-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.pop-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.pop-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.pop-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.pop-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pop-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.pop-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.pop-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.pop-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.pop-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+/* @config '../tailwind.config.ts' */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+@media (max-width: 880px) {
+  .max-width {
+    padding: 0 20px;
+    /* padding: 5px 10px;
+    width:120px; */
+  }
+}
+
+/* @media (min-width: 768px) { */
+@media (min-width: 880px) {
+  .max-width {
+    padding: 0 60px;
+    /* padding: 5px 10px;
+    width:120px; */
+  }
+}
+
+.max-width {
+  width: 100%;
+  max-width: 80rem;
+  /* padding: 0 80px; */
+  /* padding-inline-start: 7rem;
+  padding-inline-end: 7rem; */
+}
+.max-width2{
+  width: 100%;
+  max-width: 80rem;
+  /* padding: 0 80px; */
+  /* padding-inline-start: 7rem;
+  padding-inline-end: 7rem; */
+}
+
+
+.flex2{
+  flex: 1 2 0%;
+}
