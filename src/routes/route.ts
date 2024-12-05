@@ -4,8 +4,6 @@ import { agentRoutes } from "./agent";
 import ListingsMainView from "../views/app/listings/ListingsMainView.vue";
 import { useUserStore } from "../utilities/store";
 
-
-
 const routes = [
   ...agentRoutes,
   {
@@ -41,15 +39,15 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-const userStore = useUserStore();
+  const userStore = useUserStore();
   const role = userStore.user?.role;
   // const isLoggedIn = userStore.user;
-  if (to.meta.requiresAuth && role != 'agent') {
+  if (to.meta.requiresAuth && role != "agent") {
     next({ name: "home" });
     return;
   } else {
     next();
   }
-})
+});
 
 export default router;
