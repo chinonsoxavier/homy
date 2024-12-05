@@ -43,7 +43,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
 const userStore = useUserStore();
   const role = userStore.user?.role;
-  const isLoggedIn = userStore.user;
+  // const isLoggedIn = userStore.user;
   if (to.meta.requiresAuth && role != 'agent') {
     next({ name: "home" });
     return;
