@@ -19,39 +19,39 @@ import IconComponent from "../../../../components/ReComponents/IconComponent.vue
         >
           FOR SELL
         </button>
-        <div class="flex items-center justify-start">
+        <div class="flex items-center mobile:items-start justify-start">
           <MapPinDuoIcon class="w-5 h-5" />
-          <p class="text-lg whitespace-nowrap" >3891 Ranchview Dr. Richardson, California</p>
+          <p class="text-lg whitespace-nowrap mobile:whitespace-normal mobile:text-sm text-left" >3891 Ranchview Dr. Richardson, California</p>
         </div>
       </div>
     </div>
     <div
       class="flex items-end justify-between tablet:gap-1 text-left base:items-start flex-1 flex-col gap-6 tablet:justify-center "
     >
-      <p class="text-3xl lg:text-5xl  whitespace-nowrap text-darkText font-medium text-left tablet:text-center">
+      <p class="text-2xl lg:text-5xl  whitespace-nowrap text-darkText font-medium text-left tablet:text-center">
         Price: $1,670.00
       </p>
-      <p class="text-lg font-normal text-lightText">
+      <p class="text-lg mobile:text-base font-normal text-lightText">
         Est. Payment <span class="font-medium text-darkText">$8,343/mo*</span>
       </p>
       <div class="flex items-center justify-end gap-4" >
          <div class="flex items-center justify-end gap-2" >
             <ShareNetworkIcon class="w-5 h-5" />
-            <p class="text-lg text-darkText font-medium" >Share</p>
+            <p class="text-lg mobile:text-base text-darkText font-medium" >Share</p>
          </div>
          <div class="flex gap-3 items-center w-full justify-start">
             <IconComponent
-              class="border w-12 h-12 tablet:w-10 tablet:h-10 duration-500 hover:bg-black hover:fill-white border-darkText"
+              class="border w-12 h-12 tablet:w-9 tablet:h-9 duration-500 hover:bg-black hover:fill-white border-darkText"
             >
-              <HeartIcon class="w-7 h-7 tablet:h-6 tablet:w-6" />
+              <HeartIcon class="w-7 h-7 tablet:h-5 tablet:w-5" />
             </IconComponent>
             <IconComponent
-              class="border w-12 h-12 tablet:w-10 tablet:h-10 duration-500 hover:bg-black hover:fill-white border-darkText"
+              class="border w-12 h-12 tablet:w-9 tablet:h-9 duration-500 hover:bg-black hover:fill-white border-darkText"
             >
-              <BookmarkIcon class="w-7 h-7 tablet:h-6 tablet:w-6" />
+              <BookmarkIcon class="w-7 h-7 tablet:h-5 tablet:w-5" />
             </IconComponent>
             <IconComponent
-              class="border w-12 h-12 tablet:w-10 tablet:h-10 duration-500 hover:bg-black hover:fill-white border-darkText"
+              class="border w-12 h-12 tablet:w-9 tablet:h-9 duration-500 hover:bg-black hover:fill-white border-darkText"
             >
               <PlusCircleIcon class="w-6 h-6 tablet:h-5 tablet:w-5" />
             </IconComponent>

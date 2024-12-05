@@ -93,22 +93,22 @@ const setDropDown = () => {
           <Transition>
             <div v-if="dropDown" class="flex flex-col gap-2 pt-3 px-7">
               <p
-                class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+                class="text-base duration-500 hover:text-white cursor-pointer hover:translate-x-1"
               >
                 Property Grid
               </p>
               <p
-                class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+                class="text-base duration-500 hover:text-white cursor-pointer hover:translate-x-1"
               >
                 Property List
               </p>
               <p
-                class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+                class="text-base duration-500 hover:text-white cursor-pointer hover:translate-x-1"
               >
                 Property Details
               </p>
               <p
-                class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+                class="text-base duration-500 hover:text-white cursor-pointer hover:translate-x-1"
               >
                 Add Property
               </p>

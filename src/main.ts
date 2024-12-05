@@ -7,8 +7,8 @@ import 'sweetalert2/dist/sweetalert2.min.css'
 import VueSweetalert2 from "vue-sweetalert2";
 import {createPinia} from "pinia";
 const app = createApp(App);
-app.use(VueApexCharts);
 app.use(createPinia());
+app.use(VueApexCharts);
 app.use(VueSweetalert2);
 app.use(routes);
 app.mount("#app");

@@ -41,6 +41,13 @@ const setThemeMode = () => {
     }
   }
 };
+
+window.addEventListener("scroll", () => {
+  if (window.innerWidth <= 768) {
+    
+  }
+})
+
 </script>
 
 <template>

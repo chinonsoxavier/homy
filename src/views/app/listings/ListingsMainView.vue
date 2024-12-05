@@ -22,10 +22,8 @@ const setaccordion = (params) => {
 </script>
 
 <template>
-  <section class="bg-[#fff8f4]">
-    <div class="flex flex-col items-center justify-center w-full">
+  <section class="bg-[#fff8f4] relative">
       <NavbarComponent />
-    </div>
     <div class="flex items-center justify-center">
       <div class="max-width flex flex-col gap-10">
         <ListingsDetailComponent />

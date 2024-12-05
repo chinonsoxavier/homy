@@ -1,9 +1,26 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import { image1 } from "../../../../assets/exports";
 import ImageComponent from "../../../../components/ReComponents/ImageComponent.vue";
+import { useUserStore } from "../../../../utilities/store";
+const router = useRouter();
+
+const contactAgent = () => {
+  const userStore = useUserStore();
+  const isLoggedIn = userStore.user;
+
+  if (isLoggedIn) {
+    console.log("logged in")
+  } else {
+    router.push('/auth/login');
+  }
+
+}
+
 </script>
 
 <template>
+  <form  @submit.prevent="contactAgent" action="">
   <div
     class="flex-1 flex min-w-[300px] flex-col items-center justify-center px-6 py-4 bg-white shadow-xl relative tablet:max-w-full max-w-[320px]"
   >
@@ -74,4 +91,5 @@ import ImageComponent from "../../../../components/ReComponents/ImageComponent.v
       </button>
     </div>
   </div>
+    </form>
 </template>

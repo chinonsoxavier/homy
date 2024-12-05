@@ -3,6 +3,7 @@ import { computed, ref } from "vue";
 import { useMainStore } from "../../utilities/store";
 import ArrowUpRightIcon from "../icons/regular/ArrowUpRightIcon.vue";
 import Logo from "../ReComponents/Logo.vue";
+import LockSimpleDuoIcon from "../icons/duo/LockSimpleDuoIcon.vue";
 
 const store = useMainStore();
 
@@ -22,10 +23,10 @@ window.removeEventListener("resize", () => {
   <div
     :class="[
       menuOpen && windowWidth <= 1000
-        ? 'w-screen mobile:max-w-[90vw] max-w-[300px]'
-        : 'w-0 hidden',
+        ? 'translate-x-0'
+        : 'trans -translate-x-full',
     ]"
-    class="overflow-hidden shadow-2xl bg-white fixed h-screen z-50 left-0 duration-500 delay-100"
+    class="overflow-hidden w-[800px] mobile:max-w-[70vw] max-w-[300px] shadow-2xl bg-white fixed h-screen z-50 left-0 duration-500"
   >
     <div class="p-3 mb-10">
       <Logo />
@@ -43,10 +44,11 @@ window.removeEventListener("resize", () => {
         <LockSimpleDuoIcon class="w-5 h-5 fill-darkText" />
         <p>Log In</p>
       </button>
+     
       <button
         class="py-3 tablet:py-2 tablet:flex px-5 hidden items-center gap-3 rounded-md border bg-adminPrimary text-white fill-white justify-center"
       >
-        <p>Add Listing</p>
+        <p>Sign In</p>
         <ArrowUpRightIcon class="w-5 h-5" />
       </button>
     </div>

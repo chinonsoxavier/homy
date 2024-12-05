@@ -2,6 +2,7 @@ export const agentRoutes = [
   {
     path: "/agent",
     name: "agent",
+    meta:{requiresAuth:true},
     redirect: "/agent/dashboard",
     component:()=>import("../views/agent/AgentMainView.vue"),
     children: [
