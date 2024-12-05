@@ -36,7 +36,7 @@ const prevSlide = () => {
     class="h-[80vh] base:flex-col gap-4 flex items-stretch justify-center"
   >
     <div
-      class="h-full w-full base:h-[vh] flex items-start rounded-xl justify-center relative flex-1"
+      class="h-full w-full flex  items-start rounded-xl justify-center relative flex-1"
     >
       <div
         class="flex items-center min--[570px] justify-between w-full px-10 absolute mt-8 z-10 top-2"
@@ -61,7 +61,7 @@ const prevSlide = () => {
           See all 37 Photos
         </button>
       </div>
-      <!-- <div class="w-full h-full rounded-xl" >hj -->
+      <div class="w-full h-full rounded-xl bg-[red]" >
       <ImageComponent
       v-for="(img, index) in slides" :key="index" 
         alt="property listing"
@@ -69,7 +69,7 @@ const prevSlide = () => {
         :src="img"
         class="duration-500 rounded-xl inset0 abslute object-cover w-full h-full"
       />
-      <!-- </div> -->
+      </div>
     </div>
     <div
     class="flex items-center justify-center overflw-clip gap-3"

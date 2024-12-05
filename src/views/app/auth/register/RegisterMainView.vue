@@ -42,6 +42,7 @@ const setShowPassword = () => {
   <div 
     class="w-screen mobile:px-5 flex flex-col items-center justify-center h-screen bg-lightPrimary"
   >
+
   <Logo class="fill-black"/>
     <div
       class="flex-col rounded-lg mt-3 gap-5 flex items-center justify-center bg-white max-w-[90%] shadow-lg p-7"
