@@ -29,7 +29,7 @@ const setaccordion = (params) => {
         <ListingsDetailComponent />
         <ListingsSliderComponent />
         <ListingOverviewComponent />
-        <div class="flex items-start flex-wrap-reverse justify-between gap-5">
+        <div class="flex items-stretch flex-wrap justify-start gap-5">
           <div class="flex-1 gap-5 flex  flex-col">
             <div class="p-10 rounded-xl bg-white shadow-md flex-1 tablet:p-5">
               <p class="text-3xl base:text-xl font-medium text-black text-left">Overview</p>

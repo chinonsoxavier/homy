@@ -34,7 +34,7 @@ module.exports = {
 
       screens: {
         searchP: { max: "1000px" },
-        
+
         base: { max: "900px" },
         lg: { min: "900px" },
         mobile: { max: "380px" },

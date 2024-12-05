@@ -78,10 +78,10 @@ onUnmounted(() => {
           <p class="text-lg text-darkText font-medium">Blog</p>
         </div>
 
-        <div class="flex items-center justify-end gap-4">
+        <div class="flex items-center tablet:gap-2 justify-end gap-4">
           <router-link to="/auth/login">
           <button
-            class="py-3 tablet:py-2 mobile:hidden px-5 flex items-center gap-3 rounded-md border border-adminPrimary text-adminPrimary fill-adminPrimary justify-center"
+            class="py-3 tablet:px-3 tablet:py-2 mobile:hidden px-5 flex items-center gap-3 rounded-md border border-adminPrimary text-adminPrimary fill-adminPrimary justify-center"
           >
             <LockSimpleDuoIcon class="w-5 h-5 fill-darkText" />
             <p>Log In</p>
@@ -97,7 +97,7 @@ onUnmounted(() => {
         </button>
       </router-link>
           <div
-            class="hidden searchP:flex bg-adminPrimary rounded-md py-1 px-2 "
+            class="hidden searchP:flex bg-adminPrimary rounded-md py-[2px] px-2 "
           >
             <div
               @click="toggleMenu"

@@ -7,10 +7,10 @@ import ImageComponent from '../../../../components/ReComponents/ImageComponent.v
 </script>
 
 <template>
-    <div class="flex bg-[d] gap-3 w-full border-b p-5 items-start justify-start" >
+    <div class="flex bg-[d]  gap-3 w-full border-b p-5 items-start justify-start" >
         <ImageComponent alt="profile pic" :src="image1" rounded class="max-w-14" />
 
-        <div class="flex flex-col items-start gap-5 justify-between w-full " >
+        <div class="flex bg-[re] flex-col items-start gap-5 justify-between w-full " >
             <div class="w-full " >
             <div class="flex items-center flex-wrap tablet:flex-col tablet:items-start tablet:gap-3 justify-between w-full" >
                 <p>Chinonso Xavier</p>

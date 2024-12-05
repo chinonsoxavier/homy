@@ -33,13 +33,13 @@ const prevSlide = () => {
 
 <template>
   <div
-    class="h-[80vh] base:flex-col gap-4 flex items-stretch justify-center"
+    class="h-[80vh] searchP:h-auto searchP:flex-col gap-4 flex items-start justify-center"
   >
     <div
       class="h-full w-full flex  items-start rounded-xl justify-center relative flex-1"
     >
       <div
-        class="flex items-center min--[570px] justify-between w-full px-10 absolute mt-8 z-10 top-2"
+        class="flex items-center flex-wrap gap-5  justify-between w-full px-10 absolute mt-8 z-10 top-2"
       >
         <div class="flex items-center justify-start gap-3 absoute top-5">
           <div v-on:click="prevSlide()">
@@ -57,11 +57,11 @@ const prevSlide = () => {
             </IconComponent>
           </div>
         </div>
-        <button class="bg-white hidden px-10 py-3 rounded-lg">
+        <button class="bg-white tablet:px-3 mobile:hidden searchP:py-[7px] hdden px-10 py-3 rounded-lg">
           See all 37 Photos
         </button>
       </div>
-      <div class="w-full h-full rounded-xl bg-[red]" >
+      <div class="w-full h-full rounded-xl" >
       <ImageComponent
       v-for="(img, index) in slides" :key="index" 
         alt="property listing"
@@ -72,31 +72,31 @@ const prevSlide = () => {
       </div>
     </div>
     <div
-    class="flex items-center justify-center overflw-clip gap-3"
+    class="flex searchP:flex-row items-center mobile:gap-1 h-full flex-col justify-center overflw-clip gap-3"
     >
       <img
         v-on:click="setCurrentActiveSlide(0)"
         alt="listings slider component"
         :src="listing1"
-        class="fle w-[22%] basis-1/4 cursor-pointer h-full rounded-md max-w-[190px]"
+        class="flex-1 min-w-[50px]  basis-1/5 searchP:max-w-[100%]  cursor-pointer h-full rounded-md max-w-[190px]"
       />
       <img
         v-on:click="setCurrentActiveSlide(1)"
         alt="listings slider component"
         :src="listing2"
-        class="fle w-[22%] basis-1/4 cursor-pointer h-full rounded-md max-w-[190px]"
+        class="flex-1 min-w-[50px]  basis-1/5 searchP:max-w-[100%]  cursor-pointer h-full rounded-md max-w-[190px]"
       />
       <img
         v-on:click="setCurrentActiveSlide(2)"
         alt="listings slider component"
         :src="listing3"
-        class="fle w-[22%] basis-1/4 cursor-pointer h-full rounded-md max-w-[190px]"
+        class="flex-1 min-w-[50px]  basis-1/5 searchP:max-w-[100%]  cursor-pointer h-full rounded-md max-w-[190px]"
       />
       <img
         v-on:click="setCurrentActiveSlide(3)"
         alt="listings slider component"
         :src="listing4"
-        class="fle w-[22%] basis-1/4 cursor-pointer h-full rounded-md max-w-[190px]"
+        class="flex-1 min-w-[50px] basis-1/5 searchP:max-w-[100%]  cursor-pointer h-full rounded-md max-w-[190px]"
       />
     </div>
   </div>
