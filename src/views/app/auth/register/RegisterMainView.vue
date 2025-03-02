@@ -9,26 +9,25 @@ var showPassword = ref(false);
 const formData = ref({
   username: '',
   password: '',
-  email: 'email'
+  email: ''
 });
 
 
 
 const register = async () => {
-try {
-  const data = new FormData();
-  data.append('userName', formData.value.username);
-  data.append('email', formData.value.email);
-  data.append('password', formData.value.password);
+  try {
+    const data = new FormData();
+    data.append('userName', formData.value.username);
+    data.append('email', formData.value.email);
+    data.append('password', formData.value.password);
 
-  const res = await axios.post(`${baseUrl}register`, data);
+    const res = await axios.post(`${baseUrl}auth/register`, data);
 
-  console.log(res.data);
-} catch (error) {
-  console.log(error)
-}
-  console.log();
-}
+    console.log(res.data);
+  } catch (error) {
+    console.log(error)
+  }
+};
 
 
 const setShowPassword = () => {
@@ -99,7 +98,7 @@ const setShowPassword = () => {
       </div>
     </div>
     <div class="mt-5 flex items-center justify-center" >
-        <p class="text-medium text-lightText font-medium mobile:text-sm " >Already have an account? <span class="text-primary " ><router-link to="/auth/login" >Login</router-link></span></p>
+        <p class="text-medium text-lightText font-medium mobile:text-sm " >Already have an account? <span class="text-adminPrimary " ><router-link to="/auth/login" >Login</router-link></span></p>
     </div>
   </div>
     </form>

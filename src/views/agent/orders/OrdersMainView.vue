@@ -6,10 +6,11 @@ import TrashDuoIcon from '../../../components/icons/duo/TrashDuoIcon.vue';
 import CaretIcon from '../../../components/icons/regular/CaretIcon.vue';
 import IconComponent from '../../../components/ReComponents/IconComponent.vue';
 import ImageComponent from '../../../components/ReComponents/ImageComponent.vue';
+import Paginations from '../../../components/ReComponents/Paginations.vue';
 </script>
 
 <template>
-    <div class="px-5 py-3 h-[90%] overflow-scroll ">
+    <div class="px-5 py-3 h-[88%] overflow-scroll ">
     <div class="flex h-[10%] items-center justify-between w-full ">
       <p class="text-[28px] font-mediu pop-medium text-darkText">Orders</p>
       <div class="flex items-center justify-end text-[15px] text-lightText">
@@ -18,7 +19,7 @@ import ImageComponent from '../../../components/ReComponents/ImageComponent.vue'
         <span>Orders</span>
       </div>
     </div>
-    <table class="overflow-x-scroll bg-white p-3 w-full">
+    <table class="overflow-x-scroll rounded-md bg-white p-3 w-full">
         <thead>
           <tr>
             <th class="text-left">
@@ -245,6 +246,7 @@ import ImageComponent from '../../../components/ReComponents/ImageComponent.vue'
           </tr>
         </tbody>
       </table>
+      <Paginations/>
     </div>
 </template>
 

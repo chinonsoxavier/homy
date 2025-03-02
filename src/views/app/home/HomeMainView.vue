@@ -26,6 +26,9 @@ import { ref } from "vue";
 import AppFooter from "../../../components/layout/AppFooter.vue";
 import AppInquiry from "../../../components/layout/AppInquiry.vue";
 import Menu from "../../../components/layout/Menu.vue";
+import { onMounted } from "vue";
+import { useUserStore } from "../../../utilities/store";
+const userStore = useUserStore();
 // import HeroBg from "../../../assets/HeroBg.vue";
 
 const currentActive = ref(0);
@@ -38,6 +41,10 @@ const setCurrentActivePag = (currentActivepag) => {
 // const setCurrentActiveAgentsPag = (currentActivepag) => {
 //   currentActiveAgents.value = currentActivepag;
 // };
+
+onMounted(() => {
+  console.log(userStore.user);
+});
 
 const heroData = [
   {

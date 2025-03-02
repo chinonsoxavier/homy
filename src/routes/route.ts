@@ -2,7 +2,10 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeMainView from "../views/app/home/HomeMainView.vue";
 import { agentRoutes } from "./agent";
 import ListingsMainView from "../views/app/listings/ListingsMainView.vue";
-// import { useUserStore } from "../utilities/store";
+import { useUserStore } from "../utilities/store";
+import { computed } from "vue";
+
+
 
 const routes = [
   ...agentRoutes,
@@ -15,11 +18,13 @@ const routes = [
     path: "/auth/login",
     name: "login",
     component: () => import("../views/app/auth/login/LoginMainView.vue"),
+                                                                                                                                                    meta: { requiresGuest: true },
   },
   {
     path: "/auth/register",
     name: "register",
     component: () => import("../views/app/auth/register/RegisterMainView.vue"),
+    meta: { requiresGuest: true },
   },
   {
     path: "/",
@@ -35,18 +40,27 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: routes,
+  routes,
 });
 
-// router.beforeEach((to, from, next) => {
+// router.beforeEach(async(to, from, next) => {
 //   const userStore = useUserStore();
 //   console.log(from);
-//   const role = userStore.user?.role;
-//   // const isLoggedIn = userStore.user;
+//   const role = userStore?.user.role;
+//   const isLoggedIn = computed(() => Object.entries(userStore.user).length >0 ? true : false).value;
+//   console.log(isLoggedIn);
+//   const user = computed(() => userStore.user);
+//     const accessToken = localStorage.getItem("access");
+  
+//      await userStore.initializeUser(accessToken);
+//   console.log(user.value);
 //   if (to.meta.requiresAuth && role != "agent") {
 //     next({ name: "home" });
 //     return;
-//   } else {
+//   } else if (to.meta.requiresGuest && isLoggedIn) {
+//     next({name:"home"});
+//   }
+//   else {
 //     next();
 //   }
 // });

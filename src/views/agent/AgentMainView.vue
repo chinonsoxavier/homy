@@ -15,8 +15,8 @@ const menuMode = computed(() => store.agentSidebar);
         <aside :class="[menuMode ? '' :'flex-1']" class="h-full mobile:hidden max-w-[230px] basis] duration-500 " >
         <AgentDashboardSideMenu/>
        </aside>
-       <div class="rounded-md flex-1 bg-[#f9f9fc] h-full overflow-hidden" >
-        <nav class="bg-white h-[15%] shadow-xl border-b" >
+       <div class="rounded-md flex-1 bg-[#f9f3ef] h-full overflow-hidden" >
+        <nav class="bg-white h-[12%] shadowmd border-b" >
             <AgentDashboardNavbar/>
         </nav>
                <!-- <div class="bg-white" > -->

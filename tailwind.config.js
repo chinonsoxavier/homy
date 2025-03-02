@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default  {
+export default {
   purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx"],
   darkMode: "selector",
@@ -13,7 +13,7 @@ export default  {
         lighterText: "rgb(191, 189, 189)",
         adminPrimary: "rgba(232,41,104)",
         lightPrimary: "#e8f4eb",
-        primary: "#0a7274",
+        primary: "#f9f3ef",
         darkPrimary: "#1c252e",
         darkSecondary: "#0a2744",
         lightBg: {

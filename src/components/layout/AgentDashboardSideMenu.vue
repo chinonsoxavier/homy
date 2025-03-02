@@ -9,14 +9,25 @@ import Logo from "../ReComponents/Logo.vue";
 import AddressBookDuoIcon from "../icons/duo/AddressBookDuoIcon.vue";
 import ChatCircleDotDuoIcon from "../icons/duo/ChatCircleDotDuoIcon.vue";
 import EnvelopeSimpleDuoIcon from "../icons/duo/EnvelopeSimpleDuoIcon.vue";
-import WareHouseDuoIcon from "../icons/duo/WareHouseDuoIcon.vue";
 import SignOutDuoIcon from "../icons/duo/SignOutDuoIcon.vue";
 import { computed } from "vue";
 import { useMainStore } from "../../utilities/store";
+import { useRoute} from "vue-router";
+import OrdersDuoIcon from "../icons/duo/OrdersDuoIcon.vue";
+const route = useRoute();
 const store = useMainStore();
 const dropDown = ref(false);
 const menuMode = computed(() => store.agentSidebar);
 
+const isActive = computed(() => {
+  const activeRoutes = [
+    '/agent/property/grid',
+    '/agent/property/list',
+    '/agent/property/details',
+    '/agent/property/create'
+  ];
+  return activeRoutes.includes(route.path);
+});
 const setDropDown = () => {
   dropDown.value = !dropDown.value;
 };
@@ -69,21 +80,23 @@ const setDropDown = () => {
           <div
             class="flex items-center px-2 py-2 justify-start gap-2 bg-[bue] hover:fill-white hover:text-white duration-500"
           >
-            <WareHouseDuoIcon class="w-5 h-5" />
+            <OrdersDuoIcon class="w-5 h-5" />
             <p   class="d duration-500"
               :class="[menuMode ? 'w-0 overflow-clip':'w-auto overflow-auto']">Orders</p>
           </div>
         </RouterLink>
         <div
-          class="flx items-center px-2 py-2 justify-start gap-2 bg-[bue] hover:fill-white duration-500"
+          class=" items-center justify-start gap-2 bg-[bue] hover:fill-white duration-500"
         >
           <div
-            class="flex items-start justify-between w-full"
+            class="flex items-start py-2 px-2 cursor-pointer justify-between w-full"
             @click="setDropDown()"
+                        :class="{'active':isActive}"
+
           >
-            <span class="flex items-center gap-2">
+            <span class="flex items-center gap-2"  >
               <CityDuoIcon class="w-5 h-5" />
-              <p   class="d duration-500 text-white"
+              <p   class="d duration-500"
               :class="[menuMode ? 'w-0 overflow-clip':'w-auto overflow-auto']">Property</p>
             </span>
             <span :class="[menuMode ? 'w-0 overflow-clip':'w-auto overflow-auto']" >
@@ -91,27 +104,44 @@ const setDropDown = () => {
             </span>
           </div>
           <Transition>
-            <div v-if="dropDown" class="flex flex-col gap-2 pt-3 px-7">
-              <p
-                class="text-base duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+            <div v-if="dropDown" class="flex flex-col gap-4 pt-3 px-7">
+             <router-link active-class="sub-active" to="/agent/property/grid" >
+               <div
+               class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+               >
+               Property Grid
+             </div>
+            </router-link>
+            <router-link to="/agent/property/list" active-class="sub-active" >
+
+              <div
+              class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
               >
-                Property Grid
-              </p>
-              <p
-                class="text-base duration-500 hover:text-white cursor-pointer hover:translate-x-1"
-              >
-                Property List
-              </p>
-              <p
-                class="text-base duration-500 hover:text-white cursor-pointer hover:translate-x-1"
-              >
-                Property Details
-              </p>
-              <p
-                class="text-base duration-500 hover:text-white cursor-pointer hover:translate-x-1"
-              >
-                Add Property
-              </p>
+              Property List
+            </div>
+          </router-link>
+          <router-link to="/agent/property/details" active-class="sub-active" >
+
+            <div
+            class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+            >
+            Property Details
+          </div>
+        </router-link><router-link to="/agent/property/edit" active-class="sub-active" >
+
+            <div
+            class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+            >
+            Property Edit
+          </div>
+        </router-link>
+        <router-link active-class="sub-active" to="/agent/property/create" >
+          <div
+          class="text-sm duration-500 hover:text-white cursor-pointer hover:translate-x-1"
+          >
+          Add Property
+        </div>
+      </router-link>
             </div>
           </Transition>
         </div>
@@ -168,7 +198,11 @@ const setDropDown = () => {
 </template>
 
 <style scoped>
-a.active > div {
+a.active > div,div.active {
   @apply bg-[rgba(255,255,255,0.1)] px-2 py-2 rounded-md cursor-pointer fill-white text-white;
+}
+
+a.sub-active{
+  @apply text-white;
 }
 </style>

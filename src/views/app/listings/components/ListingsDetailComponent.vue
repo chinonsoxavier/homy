@@ -8,7 +8,7 @@ import IconComponent from "../../../../components/ReComponents/IconComponent.vue
 </script>
 
 <template>
-  <div class="flex items-stretch justify-between flex-wrap searchP:justify-center searchP:flex-col searchP:gap-8  w-full searchP:py-10 py-28">
+  <div class="flex items-stretch justify-between flex-wrap searchP:justify-center searchP:flex-col searchP:gap-8  w-full searchP:py-10 py-12">
     <div class="flex flex-col items-start base:items-start base:text-left justify-between gap-4 flex-1">
       <p class="text-3xl xs:text-4xl md:text-5xl  text-darkText font-medium">
         Luxury Apartments on California.

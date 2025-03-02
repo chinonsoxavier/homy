@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import VueApexCharts from "vue3-apexcharts";
 import ArrowDuoIcon from "../../../components/icons/duo/ArrowDuoIcon.vue";
 import CityDuoIcon from "../../../components/icons/duo/CityDuoIcon.vue";
 import TipJarDuoIcon from "../../../components/icons/duo/TipJarDuoIcon.vue";
@@ -14,7 +13,7 @@ import { ref } from "vue";
 import EyeDuoIcon from "../../../components/icons/duo/EyeDuoIcon.vue";
 import PencilSimpleLineDuoIcon from "../../../components/icons/duo/PencilSimpleLineDuoIcon.vue";
 import TrashDuoIcon from "../../../components/icons/duo/TrashDuoIcon.vue";
-// import VueApexCharts from 'vue-apexcharts';
+import VueApexCharts from "vue3-apexcharts";
 
 const dropDown = ref(false);
 const dropDownSelection = ref("Month");
@@ -88,10 +87,57 @@ const options2 = {
           height: 230,
         }
         };
+
+          
+let series = [{
+  name: 'Revenue',
+  type: 'column',
+  data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
+}, {
+  name: 'Expense',
+  type: 'line',
+  data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
+}];
+       var chartOptions = {
+            chart: {
+              type: 'line',
+           width: 20,
+           toolbar: {
+                show:false
+              }
+         },
+            
+         stroke: {
+              curve:'smooth',
+           width: 1,
+         },
+         plotOptions: {
+           bar: {
+             columnWidth: '50%',
+          }
+         },
+            title: {
+              text: '',
+            },
+            dataLabels: {
+              enabled: false,
+              enabledOnSeries: [1]
+            },
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            yaxis: [{
+              title: {
+                text: '',
+              },
+            
+            
+            }]
+          }
+          
+          
 </script>
 
 <template>
-  <div class="px-5 bg-[#f9f9fc] h-[85%] overflow-y-scroll pt-5">
+  <div class="px-5 h-[88%] overflow-y-scroll pt-5">
     <div class="flex items-center justify-between w-full">
       <p class="text-[28px] font-mediu pop-medium text-darkText">Dashboard</p>
       <div class="flex items-center justify-end text-[15px] tablet:hidden text-lightText">
@@ -100,9 +146,9 @@ const options2 = {
         <span>Dashboard</span>
       </div>
     </div>
-    <div class="flex flex-wrap w-full gap-3 mt-5">
+    <div class="flex flex-wrap w-full gap-5 mt-5">
       <div
-        class="bg-white flerap flex justify-between items-stretch rounded-sm shadow basis-1/3 flex-1 cursor-pointer duration-500 hover:scale-[99%] hover:shadow-md p-8"
+        class="bg-white flerap flex justify-between items-stretch rounded-sm shadow  flex-1 cursor-pointer duration-500 hover:scale-[99%] hover:shadow-md p-8"
       >
         <div class="flex flex-col gap-2 items-start justify-center flex-1">
           <IconComponent
@@ -128,13 +174,13 @@ const options2 = {
         </div>
       </div>
       <div
-        class="bg-white  flex justify-between items-stretch rounded-sm shadow basis-1/3 flex-1 cursor-pointer duration-500 hover:scale-[99%] hover:shadow-md p-8"
+        class="bg-white  flex justify-between items-stretch rounded-sm shadow  flex-1 cursor-pointer duration-500 hover:scale-[99%] hover:shadow-md p-8"
       >
         <div class="flex flex-col gap-2 items-start justify-center flex-1">
           <IconComponent
             class="bg-[rgba(232,42,104,0.09)] rounded-sm w-14 h-14 fill-adminPrimary"
           >
-            <User3DuoIcon class="w-10 h-10" />
+            <User3DuoIcon class="w-10 h-10 " />
           </IconComponent>
           <p class="text-lightText text-sm">Followers</p>
           <div class="flex items-center justify-center gap-3">
@@ -142,7 +188,7 @@ const options2 = {
               <p class="text-xl font-semibold text-darkText">2</p>
             </div>
             <div
-              class="flex items-center px-2 rounded-sm text-[rgba(92233,103,103)] fill-text-[rgba(92233,103,103)] bg-[#fbe1e1] justify-center bg-"
+              class="flex items-center px-2 rounded-sm  text-[rgba(92233,103,103)] fill-[rgba(92233,103,103)] bg-[#fbe1e1] justify-center bg-"
             >
               <ArrowDuoIcon class="w-3 h-3 rotate-180" />
               <p class="text-sm pop-medium">7.34%</p>
@@ -154,7 +200,7 @@ const options2 = {
         </div>
       </div>
       <div
-        class="bg-white  flex justify-between items-stretch rounded-sm shadow basis-1/3 flex-1 cursor-pointer duration-500 hover:scale-[99%] hover:shadow-md p-8"
+        class="bg-white  flex justify-between items-stretch rounded-sm shadow  flex-1 cursor-pointer duration-500 hover:scale-[99%] hover:shadow-md p-8"
       >
         <div class="flex flex-col gap-2 items-start justify-center flex-1">
           <IconComponent
@@ -180,7 +226,7 @@ const options2 = {
         </div>
       </div>
       <div
-        class="bg-white  flex justify-between items-stretch rounded-sm shadow basis-1/3 flex-1 cursor-pointer duration-500 hover:scale-[99%] hover:shadow-md p-8"
+        class="bg-white  flex justify-between items-stretch rounded-sm shadow  flex-1 cursor-pointer duration-500 hover:scale-[99%] hover:shadow-md p-8"
       >
         <div class="flex flex-col gap-2 items-start justify-center flex-1">
           <IconComponent
@@ -206,19 +252,19 @@ const options2 = {
         </div>
       </div>
     </div>
-    <div class="flex-1 hidden base:block base:flex-col h-full">
+    <div class="flex-1 my-5  rounded-sm shadow p-8 bg-white base:block base:flex-col h-min">
+     <div class="" >
+      <p class="text-lg text-lightText font-medium" >Performance</p>
+     </div>
         <VueApexCharts
         class="w-full"
-          width="100%"
-          height="100%"
-          type="line"
-          :options="options"
-          :series="options.series"
+         type="line" height="350" :options="chartOptions" :series="series"
         >Could not display chart</VueApexCharts>
+        <!-- <p>custom</p> -->
         
       </div>
     <div
-      class="py-4 overflow-hidden h-full flex-wrap base:flex-col gap-3 flex items-start bg-[#f9f9fc] justify-center"
+      class="py-4 hidden overflow-hidden h-full flex-wrap base:flex-col gap-3 flex items-start bg-[#f9f9fc] justify-center"
     >
       <div class="flex-1 base:hidden base:flex-col h-full">
         <VueApexCharts
@@ -276,9 +322,9 @@ const options2 = {
         </div>
       </div>
     </div>
-    <div class="shadow-md hdden mt-8 bg-white overflow-x-scroll p-3 rounded-md">
+    <div class="shadow hdden bg-white overflow-x-scroll p-8 rounded">
       <div class="flex items-center justify-between">
-        <p class="t text-darkText text-lg">Latest Transaction</p>
+        <p class="font-medium text-lightText text-lg">Latest Transaction</p>
         <div class="relative">
           <div
             @click="setDropDown()"
@@ -342,55 +388,7 @@ const options2 = {
           </tr>
         </thead>
         <tbody class="my-4 overflow-x-scroll">
-          <tr class="py-4">
-            <td class="w-10">
-              <input type="checkbox" name="" id="" />
-            </td>
-            <td class="text-sm py-5 text-lightText font-semibold">#201</td>
-            <td class="text-sm py-5 text-lef w-44 text-lightText font-normal">
-              <div class="flex items-center gap-2">
-                <ImageComponent
-                  alt="buyer image"
-                  :src="image1"
-                  rounded
-                  class="max-w-8 min-w-8"
-                />
-                <p class="h whitespace-nowrap">Chinonso O. Xavier</p>
-              </div>
-            </td>
-            <!-- <td class="text-xs py-5 text-lightText font-normal">#201</td> -->
-            <td class="text-sm py-5 text-lightText font-normal">
-              Oct 10, 2024
-            </td>
-            <td class="text-sm py-5 text-lightText font-normal">$45,842</td>
-            <td class="text-sm py-5 text-lightText font-normal">Mastercard</td>
-            <td class="text-sm py-5 text-lightText font-normal">
-              <div
-                class="bg-[#def3e6] w-min px-2 text-[rgba(92,193,132)] py-1 text-center text-xs font-medium"
-              >
-                Completed
-              </div>
-            </td>
-            <td class="text-sm py-5 text-lightText font-normal w-32">
-              <div class="flex gap-2 items-center justify-center">
-                <IconComponent
-                  class="rounded-sm bg-[#eef2f7] fill-[#323a46] hover:bg-[rgba(210,214,220)] duration-300 w-10 h-8"
-                >
-                  <EyeDuoIcon class="w-5 h-5" />
-                </IconComponent>
-                <IconComponent
-                  class="rounded-sm bg-[rgba(96,74,227,.1)] fill-[#604ae3] hover:bg-[#604ae3] hover:fill-white duration-300 w-10 h-8"
-                >
-                  <PencilSimpleLineDuoIcon class="w-5 h-5" />
-                </IconComponent>
-                <IconComponent
-                  class="rounded-sm bg-[rgba(233,103,103,.3)] fill-[#e96767] hover:fill-white hover:bg-[#e96767] duration-300 w-10 h-8"
-                >
-                  <TrashDuoIcon class="w-5 h-5" />
-                </IconComponent>
-              </div>
-            </td>
-          </tr>
+        
           <tr class="py-4 bg-[#f9f9fc]">
             <td class="w-10">
               <input type="checkbox" name="" id="" />
@@ -541,17 +539,17 @@ const options2 = {
         </tbody>
       </table>
     </div>
-    <div class="rounded-md bg-white shadow-md p-5 my-5">
+    <div class="rounded-md bg-white shadow-md p-8 my-5">
       <div class="flex gap-5 items-stretch justify-between flex-wrap">
         <div class="flex flex-col flex-1 max-w-80 items-start min-w-[260px]">
           <div class="flex flex-col mb-5">
-            <p class="text-xl font-semibold text-lightText">Reviews</p>
+            <p class="text-lg font-medium text-lightText">Reviews</p>
             <p class="text-sm text-lightText">Overview of Review</p>
           </div>
           <div class="flex flex-col my-7">
             <p class="text-2xl font-semibold text-darkText">25426</p>
             <p class="text-sm text-lightText">
-              This month we got 346 New Reviews
+              This month you got 346 New Reviews
             </p>
           </div>
           <div class="flex items-center justify-start gap-3">
@@ -610,7 +608,7 @@ const options2 = {
                 <p class="text-sm text-lightText font-normal">25547 Reviews</p>
               </div>
             </div>
-            <div class="flex-1 h-[4px] my-4 rounded-full bg-[#7c8fac]">
+            <div class="flex-1 h-[4px] my-4 rounded-full bg-gray-300">
               <div class="w-[20%] h-full rounded-r-full bg-[#2962ff]"></div>
             </div>
           </div>
@@ -639,7 +637,7 @@ const options2 = {
                 <p class="text-sm text-lightText font-normal">5547 Reviews</p>
               </div>
             </div>
-            <div class="flex-1 h-[5px] my-4 rounded-full bg-[#7c8fac]">
+            <div class="flex-1 h-[5px] my-4 rounded-full bg-gray-300">
               <div class="w-[10%] h-full rounded-r-full bg-adminPrimary"></div>
             </div>
           </div>
@@ -653,7 +651,7 @@ const options2 = {
                 <p class="text-sm text-lightText font-normal">25547 Reviews</p>
               </div>
             </div>
-            <div class="flex-1 h-[5px] my-4 rounded-full bg-[#7c8fac]">
+            <div class="flex-1 h-[5px] my-4 rounded-full bg-gray-300">
               <div class="w-[60%] h-full rounded-r-full bg-[rgba(54,153,255)]"></div>
             </div>
           </div>
